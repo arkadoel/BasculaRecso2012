@@ -1,0 +1,16 @@
+﻿<Page x:Class="calculadora.About"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Acerca de..." Height="250" Width="400">
+	<Grid>
+        <Image Height="96" HorizontalAlignment="Right" Margin="0,78,12,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="201" Source="/calculadora;component/Images/gplv3.png" />
+        <Image Height="127" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="125" Source="/calculadora;component/calculadora.png" Opacity="0.5" />
+        <Label Content="Gran calculadora" Height="41" HorizontalAlignment="Right" Margin="0,14,12,0" FontSize="18" Name="lblApp" VerticalAlignment="Top" Width="246" FontWeight="Black" />
+        <Label Content="http://ferdminguela.blogspot.com.es" MouseLeftButtonDown="label1_MouseLeftButtonDown" Foreground="Blue"  FontSize="16" FontWeight="Light" Height="30" HorizontalAlignment="Right" Margin="0,0,12,59" Name="label1" VerticalAlignment="Bottom" Width="294" />
+        <Label Content="Autor:" HorizontalContentAlignment="Left" FontSize="18" FontWeight="Black" Height="41" HorizontalAlignment="Left" Margin="12,159,0,0" Name="label2" VerticalAlignment="Top" Width="76" />
+        <Label Content="Version 1.0" Foreground="DimGray" FontSize="12" FontWeight="Black" Height="31" HorizontalAlignment="Right" Margin="0,41,12,0" Name="label3" VerticalAlignment="Top" Width="246" />
+        <Label Content="Licencia:" FontSize="12" FontWeight="Black" Foreground="DimGray" Height="31" HorizontalAlignment="Right" Margin="0,61,12,0" Name="label4" VerticalAlignment="Top" Width="246" />
+        <Label Content="http://acidrums.deviantart.com/" MouseLeftButtonDown="label5_MouseLeftButtonDown" FontSize="14" FontWeight="Light" Foreground="Gray" Height="30" HorizontalAlignment="Right" Margin="0,0,12,23" Name="label5" VerticalAlignment="Bottom" Width="284" />
+        <Label Content="Autor icono:" FontSize="14" FontWeight="Black" Height="32" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="12,0,0,23" Name="label6" VerticalAlignment="Bottom" Width="98" />
+    </Grid>
+</Page>

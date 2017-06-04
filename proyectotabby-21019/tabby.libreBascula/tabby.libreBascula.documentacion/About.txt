@@ -1,0 +1,17 @@
+﻿Libre Bascula 
+
+	Version 2013
+	Inicio del desarrollo: Marzo 2013
+
+Para 'Libre Bascula' pese a tomar como experiencia el programa
+de la bascula ya existente, se quiere hacer nuevo y adaptado a 
+las siguientes tecnologias:
+
+	- .NET Framework 4.5
+	- SQL Server 2012
+	- Windows 8
+
+Ademas del posible cambio de licencia, la de las anteriores versiones
+fue MS-PL (Microsoft Public License) pero se estan barajando otras
+posibilidades.
+

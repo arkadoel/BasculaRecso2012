@@ -1,0 +1,6 @@
+Proyecto en fase experimental, se estan haciendo pruebas y puede que las 
+primeras versiones no se parezcan en nada a lo actualmente contenido en 
+este proyecto
+
+Desarrollador:
+fer.d.minguela@gmail.com

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apps.fonts", "..\apps.fonts\apps.fonts.csproj", "{A686CBF1-FA0D-489C-94FA-1DCD354580E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apps.controls", "..\apps.windows\apps.controls.csproj", "{14885943-DF7B-4EAB-83C9-B3BDA4EEB6A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calculadora", "..\calculadora\calculadora.csproj", "{8E524041-F80E-439D-B72E-32910EA75294}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs28
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\apps.fonts\\apps.fonts.csproj
+		SccProjectName1 = ../apps.fonts
+		SccLocalPath1 = ..\\apps.fonts
+		SccProjectUniqueName2 = ..\\apps.windows\\apps.controls.csproj
+		SccProjectName2 = ../apps.windows
+		SccLocalPath2 = ..\\apps.windows
+		SccProjectUniqueName3 = ..\\calculadora\\calculadora.csproj
+		SccProjectName3 = ../calculadora
+		SccLocalPath3 = ..\\calculadora
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A686CBF1-FA0D-489C-94FA-1DCD354580E0}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A686CBF1-FA0D-489C-94FA-1DCD354580E0}.Debug|Any CPU.Build.0 = Debug|x86
+		{A686CBF1-FA0D-489C-94FA-1DCD354580E0}.Release|Any CPU.ActiveCfg = Release|x86
+		{A686CBF1-FA0D-489C-94FA-1DCD354580E0}.Release|Any CPU.Build.0 = Release|x86
+		{14885943-DF7B-4EAB-83C9-B3BDA4EEB6A9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{14885943-DF7B-4EAB-83C9-B3BDA4EEB6A9}.Debug|Any CPU.Build.0 = Debug|x86
+		{14885943-DF7B-4EAB-83C9-B3BDA4EEB6A9}.Release|Any CPU.ActiveCfg = Release|x86
+		{14885943-DF7B-4EAB-83C9-B3BDA4EEB6A9}.Release|Any CPU.Build.0 = Release|x86
+		{8E524041-F80E-439D-B72E-32910EA75294}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8E524041-F80E-439D-B72E-32910EA75294}.Debug|Any CPU.Build.0 = Debug|x86
+		{8E524041-F80E-439D-B72E-32910EA75294}.Release|Any CPU.ActiveCfg = Release|x86
+		{8E524041-F80E-439D-B72E-32910EA75294}.Release|Any CPU.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

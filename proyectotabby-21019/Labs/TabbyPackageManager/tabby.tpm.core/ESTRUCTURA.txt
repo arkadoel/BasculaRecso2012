@@ -1,0 +1,15 @@
+﻿Estructura de un paquete .tpm (tabby package manager)
+
+
+<nombreApp>_<Version>_<x32 | x64 | any>.tpm
+|
+|--CONTROL				//directorio con las configuraciones
+|	|-->info.xml		//informacion de:
+|							Version
+|							Directorio de instalacion
+|
+|	|-->preInstall.*	//archivo .cmd o .exe para antes de instalar
+|	|-->postInstall.*	//configuracion para despues de la instalacion
+|
+|--RELEASE				//archivos a instalar
+|	|

@@ -1,0 +1,18 @@
+﻿tpm (Tabby Package Manager)
+Autor/soporte: fer.d.minguela@gmail.com
+Version desarrollo: 20.13.03
+Version publica: 0.1
+
+Tabby package manager es un programa para linea de comandos que sirve para la gestion sencilla de paquetes e instaladores.
+
+Uso:
+	tpm [orden] parametros
+
+Ordenes:
+	--help			Muestra la ayuda
+	install-pkg		Instala un paquete pasandole la ruta en donde se encuentra.
+	install-script	Instalar paquetes mediante un script
+	install			Instala un paquete desde la lista de repositorios (pendiente)
+	update			Actualiza la cache de paquetes
+	upgrade			Busca e instala actualizaciones para el software instalado.
+
