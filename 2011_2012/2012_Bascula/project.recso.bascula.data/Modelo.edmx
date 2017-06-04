@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="recso2011DBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="recso2011DBModelStoreContainer">
+          <EntitySet Name="ConfiguracionApps" EntityType="recso2011DBModel.Store.ConfiguracionApps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmpresaEnObras" EntityType="recso2011DBModel.Store.EmpresaEnObras" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Empresas" EntityType="recso2011DBModel.Store.Empresas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FormasPago" EntityType="recso2011DBModel.Store.FormasPago" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HistoricoAlbaranes" EntityType="recso2011DBModel.Store.HistoricoAlbaranes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="logFormasPago" EntityType="recso2011DBModel.Store.logFormasPago" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Obras" EntityType="recso2011DBModel.Store.Obras" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Residuos" EntityType="recso2011DBModel.Store.Residuos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoVehiculoes" EntityType="recso2011DBModel.Store.TipoVehiculoes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TransitosActuales" EntityType="recso2011DBModel.Store.TransitosActuales" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuarios" EntityType="recso2011DBModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vehiculos" EntityType="recso2011DBModel.Store.Vehiculos" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ConfiguracionApps">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="ultimoAlbaran" Type="bigint" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="EmpresaEnObras">
+          <Key>
+            <PropertyRef Name="recnumEmpresa" />
+            <PropertyRef Name="recnumObra" />
+            <PropertyRef Name="fechaInicio" />
+            <PropertyRef Name="fechaFin" />
+          </Key>
+          <Property Name="recnumEmpresa" Type="bigint" Nullable="false" />
+          <Property Name="recnumObra" Type="bigint" Nullable="false" />
+          <Property Name="fechaInicio" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="fechaFin" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Empresas">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Name="recnum" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="razonSocial" Type="varchar" MaxLength="100" />
+          <Property Name="cif" Type="varchar" MaxLength="50" />
+          <Property Name="direccion" Type="varchar" MaxLength="500" />
+          <Property Name="localidad" Type="varchar" MaxLength="50" />
+          <Property Name="provincia" Type="varchar" MaxLength="50" />
+          <Property Name="telefono" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar(max)" />
+          <Property Name="cuentaBancaria" Type="varchar" MaxLength="100" />
+          <Property Name="tipoDePago" Type="varchar" MaxLength="25" />
+          <Property Name="codigoMilena" Type="bigint" />
+          <Property Name="tipoDeEmpresa" Type="varchar" MaxLength="50" />
+          <Property Name="esmoroso" Type="bit" />
+        </EntityType>
+        <EntityType Name="FormasPago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="recnumEmpresa" Type="bigint" />
+          <Property Name="limiteSaldo" Type="float" />
+          <Property Name="saldoActual" Type="float" />
+          <Property Name="ultimaModificacion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HistoricoAlbaranes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="numAlbaran" Type="varchar" MaxLength="50" />
+          <Property Name="fechaEntrada" Type="varchar" MaxLength="70" />
+          <Property Name="fechaSalida" Type="varchar" MaxLength="70" />
+          <Property Name="bruto" Type="varchar" MaxLength="7" />
+          <Property Name="tara" Type="varchar" MaxLength="7" />
+          <Property Name="neto" Type="varchar" MaxLength="7" />
+          <Property Name="matricula" Type="varchar" MaxLength="25" />
+          <Property Name="precioResiduo" Type="varchar" MaxLength="10" />
+          <Property Name="ivaAplicado" Type="varchar" MaxLength="10" />
+          <Property Name="importeSinIVA" Type="varchar" MaxLength="10" />
+          <Property Name="importeIVA" Type="varchar" MaxLength="10" />
+          <Property Name="residuo" Type="varchar" MaxLength="1024" />
+          <Property Name="importeFinal" Type="varchar" MaxLength="10" />
+          <Property Name="NombreTransportista" Type="varchar" MaxLength="1024" />
+          <Property Name="Telefonos" Type="varchar" MaxLength="1024" />
+          <Property Name="TipoVehiculo" Type="varchar" MaxLength="100" />
+          <Property Name="EmpPagadorNombre" Type="varchar" MaxLength="1024" />
+          <Property Name="EmpPagadorDireccion" Type="varchar" MaxLength="1024" />
+          <Property Name="EntidadGeneradora" Type="varchar" MaxLength="1024" />
+          <Property Name="FormaPago" Type="varchar" MaxLength="100" />
+          <Property Name="obra" Type="varchar" MaxLength="1024" />
+          <Property Name="LugarGeneracion" Type="varchar" MaxLength="1024" />
+          <Property Name="tipoResiduo" Type="varchar" MaxLength="20" />
+          <Property Name="empPoseedor" Type="varchar" MaxLength="1024" />
+          <Property Name="metrosCubicos" Type="varchar" MaxLength="20" />
+          <Property Name="PesoMCubicos" Type="varchar" MaxLength="50" />
+          <Property Name="empProductor" Type="varchar" MaxLength="100" />
+          <Property Name="empClienteMilena" Type="varchar" MaxLength="10" />
+          <Property Name="milenaObra" Type="varchar" MaxLength="10" />
+          <Property Name="milenaProducto" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="logFormasPago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="recnumEmpresa" Type="bigint" />
+          <Property Name="saldo" Type="float" />
+          <Property Name="fechaModificacion" Type="datetime" />
+          <Property Name="anteriorSaldo" Type="float" />
+          <Property Name="importeAlbaran" Type="float" />
+          <Property Name="tipoModificacion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Obras">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Name="recnum" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="denominacion" Type="varchar(max)" />
+          <Property Name="localidad" Type="varchar" MaxLength="50" />
+          <Property Name="provincia" Type="varchar" MaxLength="50" />
+          <Property Name="codigoMilena" Type="int" />
+          <Property Name="licenciaMunicipal" Type="varchar" MaxLength="300" />
+          <Property Name="finicioObra" Type="varchar" MaxLength="50" />
+          <Property Name="ffinObra" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Residuos">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Name="recnum" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="nchar" MaxLength="50" />
+          <Property Name="descripcion" Type="nchar" MaxLength="100" />
+          <Property Name="precio" Type="float" />
+          <Property Name="ivaAplicado" Type="float" />
+          <Property Name="tipoMaterial" Type="nchar" MaxLength="8" />
+          <Property Name="codigoLER" Type="nchar" MaxLength="20" />
+          <Property Name="milena" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TipoVehiculoes">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Name="recnum" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="capacidad" Type="float" />
+        </EntityType>
+        <EntityType Name="TransitosActuales">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="numAlbaran" Type="varchar" MaxLength="50" />
+          <Property Name="matricula" Type="varchar" MaxLength="50" />
+          <Property Name="fechaEntrada" Type="varchar" MaxLength="100" />
+          <Property Name="fechaSalida" Type="varchar" MaxLength="100" />
+          <Property Name="bruto" Type="varchar" MaxLength="50" />
+          <Property Name="tara" Type="varchar" MaxLength="50" />
+          <Property Name="neto" Type="varchar" MaxLength="50" />
+          <Property Name="importeIVA" Type="varchar" MaxLength="50" />
+          <Property Name="importeFinal" Type="varchar" MaxLength="50" />
+          <Property Name="importeSinIva" Type="varchar" MaxLength="50" />
+          <Property Name="residuo" Type="int" />
+          <Property Name="transportista" Type="bigint" />
+          <Property Name="poseedor" Type="bigint" />
+          <Property Name="productor" Type="bigint" />
+          <Property Name="plantaTransferencia" Type="bigint" />
+          <Property Name="plantaValorizacion" Type="bigint" />
+          <Property Name="obra" Type="bigint" />
+          <Property Name="IVAaplicado" Type="varchar" MaxLength="50" />
+          <Property Name="tipoVehiculo" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="loginName" />
+          </Key>
+          <Property Name="loginName" Type="nchar" Nullable="false" MaxLength="20" />
+          <Property Name="password" Type="nchar" Nullable="false" MaxLength="20" />
+          <Property Name="idEmpleado" Type="int" />
+          <Property Name="permiso" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="1024" />
+          <Property Name="NombreReal" Type="varchar" MaxLength="1024" />
+        </EntityType>
+        <EntityType Name="Vehiculos">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Name="recnum" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="recnumEmpresa" Type="bigint" />
+          <Property Name="matriculaVehiculo" Type="varchar" MaxLength="50" />
+          <Property Name="fechaAlta" Type="varchar" MaxLength="50" />
+          <Property Name="fechaBaja" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="recso2011DBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="recso2011DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TipoVehiculoes" EntityType="recso2011DBModel.TipoVehiculo" />
+          <EntitySet Name="Vehiculos" EntityType="recso2011DBModel.Vehiculo" />
+          <EntitySet Name="EmpresaEnObras" EntityType="recso2011DBModel.EmpresaEnObra" />
+          <EntitySet Name="TransitosActuales" EntityType="recso2011DBModel.TransitosActuale" />
+          <EntitySet Name="ConfiguracionApps" EntityType="recso2011DBModel.ConfiguracionApp" />
+          <EntitySet Name="HistoricoAlbaranes" EntityType="recso2011DBModel.HistoricoAlbarane" />
+          <EntitySet Name="Residuos" EntityType="recso2011DBModel.Residuo" />
+          <EntitySet Name="FormasPagoes" EntityType="recso2011DBModel.FormasPago" />
+          <EntitySet Name="Empresas" EntityType="recso2011DBModel.Empresa" />
+          <EntitySet Name="logFormasPagoes" EntityType="recso2011DBModel.logFormasPago" />
+          <EntitySet Name="Usuarios" EntityType="recso2011DBModel.Usuario" />
+          <EntitySet Name="Obras" EntityType="recso2011DBModel.Obra" />
+        </EntityContainer>
+        <EntityType Name="TipoVehiculo">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Type="Int32" Name="recnum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="capacidad" />
+        </EntityType>
+        <EntityType Name="Vehiculo">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Type="Int64" Name="recnum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="recnumEmpresa" />
+          <Property Type="String" Name="matriculaVehiculo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fechaAlta" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fechaBaja" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EmpresaEnObra">
+          <Key>
+            <PropertyRef Name="recnumEmpresa" />
+            <PropertyRef Name="recnumObra" />
+            <PropertyRef Name="fechaInicio" />
+            <PropertyRef Name="fechaFin" />
+          </Key>
+          <Property Type="Int64" Name="recnumEmpresa" Nullable="false" />
+          <Property Type="Int64" Name="recnumObra" Nullable="false" />
+          <Property Type="String" Name="fechaInicio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fechaFin" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TransitosActuale">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="numAlbaran" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="matricula" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fechaEntrada" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fechaSalida" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="bruto" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tara" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="neto" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="importeIVA" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="importeFinal" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="importeSinIva" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="residuo" />
+          <Property Type="Int64" Name="transportista" />
+          <Property Type="Int64" Name="poseedor" />
+          <Property Type="Int64" Name="productor" />
+          <Property Type="Int64" Name="plantaTransferencia" />
+          <Property Type="Int64" Name="plantaValorizacion" />
+          <Property Type="Int64" Name="obra" />
+          <Property Type="String" Name="IVAaplicado" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tipoVehiculo" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ConfiguracionApp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="ultimoAlbaran" Nullable="false" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="HistoricoAlbarane">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="numAlbaran" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fechaEntrada" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fechaSalida" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="bruto" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tara" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="neto" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="matricula" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="precioResiduo" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ivaAplicado" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="importeSinIVA" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="importeIVA" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="residuo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="importeFinal" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NombreTransportista" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telefonos" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoVehiculo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmpPagadorNombre" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmpPagadorDireccion" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EntidadGeneradora" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FormaPago" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="obra" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LugarGeneracion" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tipoResiduo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="empPoseedor" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="metrosCubicos" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PesoMCubicos" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="empProductor" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="empClienteMilena" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="milenaObra" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="milenaProducto" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Residuo">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Type="Int32" Name="recnum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nombre" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="descripcion" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Type="Double" Name="precio" />
+          <Property Type="Double" Name="ivaAplicado" />
+          <Property Type="String" Name="tipoMaterial" MaxLength="8" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="codigoLER" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="milena" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="FormasPago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="recnumEmpresa" />
+          <Property Type="Double" Name="limiteSaldo" />
+          <Property Type="Double" Name="saldoActual" />
+          <Property Type="String" Name="ultimaModificacion" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Type="Int64" Name="recnum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="razonSocial" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cif" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="direccion" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="localidad" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="provincia" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="telefono" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="email" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cuentaBancaria" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tipoDePago" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="codigoMilena" />
+          <Property Type="String" Name="tipoDeEmpresa" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="esmoroso" />
+        </EntityType>
+        <EntityType Name="logFormasPago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="recnumEmpresa" />
+          <Property Type="Double" Name="saldo" />
+          <Property Type="DateTime" Name="fechaModificacion" />
+          <Property Type="Double" Name="anteriorSaldo" />
+          <Property Type="Double" Name="importeAlbaran" />
+          <Property Type="String" Name="tipoModificacion" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="loginName" />
+          </Key>
+          <Property Type="String" Name="loginName" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="password" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="idEmpleado" />
+          <Property Type="String" Name="permiso" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="email" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NombreReal" MaxLength="1024" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Obra">
+          <Key>
+            <PropertyRef Name="recnum" />
+          </Key>
+          <Property Type="Int64" Name="recnum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="denominacion" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="localidad" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="provincia" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="codigoMilena" />
+          <Property Type="String" Name="licenciaMunicipal" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="finicioObra" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ffinObra" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="recso2011DBModelStoreContainer" CdmEntityContainer="recso2011DBEntities">
+    <EntitySetMapping Name="TipoVehiculoes">
+      <EntityTypeMapping TypeName="IsTypeOf(recso2011DBModel.TipoVehiculo)">
+        <MappingFragment StoreEntitySet="TipoVehiculoes">
+          <ScalarProperty Name="recnum" ColumnName="recnum" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculos">
+      <EntityTypeMapping TypeName="IsTypeOf(recso2011DBModel.Vehiculo)">
+        <MappingFragment StoreEntitySet="Vehiculos">
+          <ScalarProperty Name="recnum" ColumnName="recnum" />
+          <ScalarProperty Name="recnumEmpresa" ColumnName="recnumEmpresa" />
+          <ScalarProperty Name="matriculaVehiculo" ColumnName="matriculaVehiculo" />
+          <ScalarProperty Name="fechaAlta" ColumnName="fechaAlta" />
+          <ScalarProperty Name="fechaBaja" ColumnName="fechaBaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaEnObras">
+      <EntityTypeMapping TypeName="IsTypeOf(recso2011DBModel.EmpresaEnObra)">
+        <MappingFragment StoreEntitySet="EmpresaEnObras">
+          <ScalarProperty Name="recnumEmpresa" ColumnName="recnumEmpresa" />
+          <ScalarProperty Name="recnumObra" ColumnName="recnumObra" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransitosActuales">
+      <EntityTypeMapping TypeName="IsTypeOf(recso2011DBModel.TransitosActuale)">
+        <MappingFragment StoreEntitySet="TransitosActuales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="numAlbaran" ColumnName="numAlbaran" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="bruto" ColumnName="bruto" />
+          <ScalarProperty Name="tara" ColumnName="tara" />
+          <ScalarProperty Name="neto" ColumnName="neto" />
+          <ScalarProperty Name="importeIVA" ColumnName="importeIVA" />
+          <ScalarProperty Name="importeFinal" ColumnName="importeFinal" />
+          <ScalarProperty Name="importeSinIva" ColumnName="importeSinIva" />
+          <ScalarProperty Name="residuo" ColumnName="residuo" />
+          <ScalarProperty Name="transportista" ColumnName="transportista" />
+          <ScalarProperty Name="poseedor" ColumnName="poseedor" />
+          <ScalarProperty Name="productor" ColumnName="productor" />
+          <ScalarProperty Name="plantaTransferencia" ColumnName="plantaTransferencia" />
+          <ScalarProperty Name="plantaValorizacion" ColumnName="plantaValorizacion" />
+          <ScalarProperty Name="obra" ColumnName="obra" />
+          <ScalarProperty Name="IVAaplicado" ColumnName="IVAaplicado" />
+          <ScalarProperty Name="tipoVehiculo" ColumnName="tipoVehiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfiguracionApps">
+      <EntityTypeMapping TypeName="IsTypeOf(recso2011DBModel.ConfiguracionApp)">
+        <MappingFragment StoreEntitySet="ConfiguracionApps">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ultimoAlbaran" ColumnName="ultimoAlbaran" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+          <EntitySetMapping Name="HistoricoAlbaranes">
+            <EntityTypeMapping TypeName="recso2011DBModel.HistoricoAlbarane">
+              <MappingFragment StoreEntitySet="HistoricoAlbaranes">
+                <ScalarProperty Name="milenaProducto" ColumnName="milenaProducto" />
+                <ScalarProperty Name="milenaObra" ColumnName="milenaObra" />
+                <ScalarProperty Name="empClienteMilena" ColumnName="empClienteMilena" />
+                <ScalarProperty Name="empProductor" ColumnName="empProductor" />
+                <ScalarProperty Name="PesoMCubicos" ColumnName="PesoMCubicos" />
+                <ScalarProperty Name="metrosCubicos" ColumnName="metrosCubicos" />
+                <ScalarProperty Name="empPoseedor" ColumnName="empPoseedor" />
+                <ScalarProperty Name="tipoResiduo" ColumnName="tipoResiduo" />
+                <ScalarProperty Name="LugarGeneracion" ColumnName="LugarGeneracion" />
+                <ScalarProperty Name="obra" ColumnName="obra" />
+                <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+                <ScalarProperty Name="EntidadGeneradora" ColumnName="EntidadGeneradora" />
+                <ScalarProperty Name="EmpPagadorDireccion" ColumnName="EmpPagadorDireccion" />
+                <ScalarProperty Name="EmpPagadorNombre" ColumnName="EmpPagadorNombre" />
+                <ScalarProperty Name="TipoVehiculo" ColumnName="TipoVehiculo" />
+                <ScalarProperty Name="Telefonos" ColumnName="Telefonos" />
+                <ScalarProperty Name="NombreTransportista" ColumnName="NombreTransportista" />
+                <ScalarProperty Name="importeFinal" ColumnName="importeFinal" />
+                <ScalarProperty Name="residuo" ColumnName="residuo" />
+                <ScalarProperty Name="importeIVA" ColumnName="importeIVA" />
+                <ScalarProperty Name="importeSinIVA" ColumnName="importeSinIVA" />
+                <ScalarProperty Name="ivaAplicado" ColumnName="ivaAplicado" />
+                <ScalarProperty Name="precioResiduo" ColumnName="precioResiduo" />
+                <ScalarProperty Name="matricula" ColumnName="matricula" />
+                <ScalarProperty Name="neto" ColumnName="neto" />
+                <ScalarProperty Name="tara" ColumnName="tara" />
+                <ScalarProperty Name="bruto" ColumnName="bruto" />
+                <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+                <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+                <ScalarProperty Name="numAlbaran" ColumnName="numAlbaran" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Residuos">
+            <EntityTypeMapping TypeName="recso2011DBModel.Residuo">
+              <MappingFragment StoreEntitySet="Residuos">
+                <ScalarProperty Name="milena" ColumnName="milena" />
+                <ScalarProperty Name="codigoLER" ColumnName="codigoLER" />
+                <ScalarProperty Name="tipoMaterial" ColumnName="tipoMaterial" />
+                <ScalarProperty Name="ivaAplicado" ColumnName="ivaAplicado" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="recnum" ColumnName="recnum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormasPagoes">
+            <EntityTypeMapping TypeName="recso2011DBModel.FormasPago">
+              <MappingFragment StoreEntitySet="FormasPago">
+                <ScalarProperty Name="ultimaModificacion" ColumnName="ultimaModificacion" />
+                <ScalarProperty Name="saldoActual" ColumnName="saldoActual" />
+                <ScalarProperty Name="limiteSaldo" ColumnName="limiteSaldo" />
+                <ScalarProperty Name="recnumEmpresa" ColumnName="recnumEmpresa" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empresas">
+            <EntityTypeMapping TypeName="recso2011DBModel.Empresa">
+              <MappingFragment StoreEntitySet="Empresas">
+                <ScalarProperty Name="esmoroso" ColumnName="esmoroso" />
+                <ScalarProperty Name="tipoDeEmpresa" ColumnName="tipoDeEmpresa" />
+                <ScalarProperty Name="codigoMilena" ColumnName="codigoMilena" />
+                <ScalarProperty Name="tipoDePago" ColumnName="tipoDePago" />
+                <ScalarProperty Name="cuentaBancaria" ColumnName="cuentaBancaria" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="localidad" ColumnName="localidad" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="cif" ColumnName="cif" />
+                <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="recnum" ColumnName="recnum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logFormasPagoes">
+            <EntityTypeMapping TypeName="recso2011DBModel.logFormasPago">
+              <MappingFragment StoreEntitySet="logFormasPago">
+                <ScalarProperty Name="tipoModificacion" ColumnName="tipoModificacion" />
+                <ScalarProperty Name="importeAlbaran" ColumnName="importeAlbaran" />
+                <ScalarProperty Name="anteriorSaldo" ColumnName="anteriorSaldo" />
+                <ScalarProperty Name="fechaModificacion" ColumnName="fechaModificacion" />
+                <ScalarProperty Name="saldo" ColumnName="saldo" />
+                <ScalarProperty Name="recnumEmpresa" ColumnName="recnumEmpresa" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="recso2011DBModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="NombreReal" ColumnName="NombreReal" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="permiso" ColumnName="permiso" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="loginName" ColumnName="loginName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Obras">
+            <EntityTypeMapping TypeName="recso2011DBModel.Obra">
+              <MappingFragment StoreEntitySet="Obras">
+                <ScalarProperty Name="ffinObra" ColumnName="ffinObra" />
+                <ScalarProperty Name="finicioObra" ColumnName="finicioObra" />
+                <ScalarProperty Name="licenciaMunicipal" ColumnName="licenciaMunicipal" />
+                <ScalarProperty Name="codigoMilena" ColumnName="codigoMilena" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="localidad" ColumnName="localidad" />
+                <ScalarProperty Name="denominacion" ColumnName="denominacion" />
+                <ScalarProperty Name="recnum" ColumnName="recnum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Modelo" ZoomLevel="82">
+        <EntityTypeShape EntityType="recso2011DBModel.TipoVehiculo" Width="1.5" PointX="2.75" PointY="3.75" Height="1.4279589843749996" />
+        <EntityTypeShape EntityType="recso2011DBModel.Vehiculo" Width="1.5" PointX="7.125" PointY="0.625" Height="1.7566536458333317" />
+        <EntityTypeShape EntityType="recso2011DBModel.EmpresaEnObra" Width="1.5" PointX="5.375" PointY="5" Height="1.7879850260416665" />
+        <EntityTypeShape EntityType="recso2011DBModel.TransitosActuale" Width="1.5" PointX="0.875" PointY="2.75" Height="4.8648079427083353" />
+        <EntityTypeShape EntityType="recso2011DBModel.ConfiguracionApp" Width="1.5" PointX="2.75" PointY="5.5" Height="1.4033821614583317" />
+        <EntityTypeShape EntityType="recso2011DBModel.HistoricoAlbarane" Width="1.5" PointX="9.125" PointY="0.5" Height="6.9801236979166674" />
+        <EntityTypeShape EntityType="recso2011DBModel.Residuo" Width="1.5" PointX="2.875" PointY="0.75" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="recso2011DBModel.FormasPago" Width="1.5" PointX="2.75" PointY="7.125" Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="recso2011DBModel.Empresa" Width="1.5" PointX="5.25" PointY="0.5" Height="3.7109993489583317" />
+        <EntityTypeShape EntityType="recso2011DBModel.logFormasPago" Width="1.5" PointX="5.375" PointY="7.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="recso2011DBModel.Usuario" Width="1.5" PointX="1" PointY="0.5" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="recso2011DBModel.Obra" Width="1.5" PointX="7.375" PointY="3.25" Height="2.5571907552083388" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

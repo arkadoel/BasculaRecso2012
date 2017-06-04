@@ -1,0 +1,22 @@
+﻿<Window x:Class="project.recso.bascula.frontend.wpf.web.Clientes.MandarMailsCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mandar email"  Height="402" Width="747" Loaded="Window_Loaded" Icon="/project.recso.bascula.frontend.wpf;component/Images/mailIcon.png">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFBABABA" Offset="0" />
+                <GradientStop Color="#FFE2E2E2" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Rellene los datos a continuacion mostrados para mandar el email " Height="28" HorizontalAlignment="Left" Margin="8,9,0,0" Name="label1" VerticalAlignment="Top" Width="469" />
+        <ComboBox BorderBrush="Black" Background="#BAFFFFFF" Height="23" HorizontalAlignment="Left" IsEditable="true" IsTextSearchEnabled="True" Margin="92,39,0,0" Name="cmbEmail" VerticalAlignment="Top" Width="620" />
+        <Label Content="Destinatario" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="12,39,0,0" Name="label2" Height="28" VerticalAlignment="Top" />
+        <Image Height="190" HorizontalAlignment="Right" Opacity="0.2" Name="image1" Stretch="Fill" VerticalAlignment="Bottom" Width="373" Source="/project.recso.bascula.frontend.wpf;component/Images/mailIcon.png" Margin="0,0,13,0" />
+        <Button Content="Enviar" Height="23" HorizontalAlignment="Left" Margin="12,0,0,12" Name="btnEnviarEmail" Click="btnEnviarEmail_Click" VerticalAlignment="Bottom" Width="95" />
+        <TextBox AcceptsReturn="true" FontFamily="Verdana" FontSize="11" AcceptsTab="true" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" BorderBrush="Black" Margin="12,118,13,41" Name="txtCuerpoMensaje" Background="#BAFFFFFF"></TextBox>
+        <TextBox Background="#BAFFFFFF" BorderBrush="Black" Height="27" HorizontalAlignment="Left" Margin="92,68,0,0" Name="txtAsunto" TextWrapping="Wrap" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" Width="621" />
+        <Label Content="Asunto" HorizontalContentAlignment="Right" Height="28" HorizontalAlignment="Left" Margin="12,66,0,0" Name="label3" VerticalAlignment="Top" Width="74" />
+        <Label Content="Texto del mensaje:" Height="30" HorizontalAlignment="Left"  Margin="12,92,0,0" Name="label4" VerticalAlignment="Top" Width="158" />
+    </Grid>
+</Window>

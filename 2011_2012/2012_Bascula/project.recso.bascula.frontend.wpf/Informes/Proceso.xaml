@@ -1,0 +1,10 @@
+﻿<Window x:Class="project.recso.bascula.frontend.wpf.Informes.Proceso"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Proceso de exportacion" Background="Gainsboro" WindowStartupLocation="CenterScreen" Height="126" Width="543" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" >
+    <Grid>
+        <TextBox Margin="5,40,5,5" Name="txtProgreso" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" />
+        <ProgressBar Height="26" Margin="5,8,12,0" Minimum="0" Maximum="101" Name="barraProgreso" VerticalAlignment="Top" />
+        <Button Content="Abrir ubicacion" Height="26" HorizontalAlignment="Left" Margin="5,8,0,0" Name="btnCerrar" VerticalAlignment="Top" Width="504" Click="btnCerrar_Click" />
+    </Grid>
+</Window>

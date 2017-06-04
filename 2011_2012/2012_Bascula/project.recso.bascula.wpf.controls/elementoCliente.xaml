@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="project.recso.bascula.wpf.controls.elementoCliente"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="50" Width="900" Loaded="UserControl_Loaded">
+    <Grid >
+        <Rectangle Margin="0,5" Fill="#4CACD1AC" RadiusX="70" RadiusY="70"></Rectangle>
+        <Label Height="32"  HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Margin="8,6,0,0" FontFamily="Verdana" FontSize="14" Name="txtCodigoMilena" Content="6000" VerticalAlignment="Top" Width="110" />
+        <Label Height="32"  HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="124,6,0,0" FontFamily="Verdana" FontSize="14" Name="txtNombreEmpresa" Content="Recso SL" VerticalAlignment="Top" Width="605" />
+        <Image Height="48" HorizontalAlignment="Right" MouseLeftButtonDown="btnObras_MouseLeftButtonDown" Name="btnObras" Stretch="Fill" VerticalAlignment="Top" Width="48" Source="/project.recso.bascula.wpf.controls;component/Images/Excavator-icon.png" Margin="0,0,61,0" />
+        <Image Height="48" HorizontalAlignment="Right" MouseLeftButtonDown="btnVehiculos_MouseLeftButtonDown" Margin="0,0,12,0" Name="btnVehiculos" Source="/project.recso.bascula.wpf.controls;component/Images/dumper-icon.png" Stretch="Fill" VerticalAlignment="Top" Width="48" />
+        <Image Height="39" HorizontalAlignment="Right" Margin="0,6,115,0" Name="btnVerCobros" MouseLeftButtonDown="btnVerCobros_MouseLeftButtonDown" Stretch="Fill" VerticalAlignment="Top" Width="48" Source="/project.recso.bascula.wpf.controls;component/Images/cash-register-icon.png" />
+        <Rectangle Margin="0,5" HorizontalAlignment="Left" Width="739" Fill="#4CACD1AC" Opacity="0.5" RadiusX="70" RadiusY="70" MouseLeftButtonDown="Grid_MouseLeftButtonDown"></Rectangle>
+    </Grid>
+</UserControl>

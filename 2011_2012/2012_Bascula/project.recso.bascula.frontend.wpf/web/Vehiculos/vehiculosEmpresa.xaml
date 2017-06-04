@@ -1,0 +1,105 @@
+﻿<Window x:Class="project.recso.bascula.frontend.wpf.web.Vehiculos.vehiculosEmpresa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="vehiculosEmpresa" Height="600" Width="700" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Topmost="true" WindowStyle="None" AllowsTransparency="true" Background="{x:Null}" >
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="CharacterCasing" Value="Upper" />
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="PasswordChar" Value="*" />
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ClipToBounds="False">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <!-- the background for the button -->
+                            <Rectangle RadiusX="15" RadiusY="10" Grid.RowSpan="2">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStop Color="#00ca00" Offset="0"/>
+                                            <GradientStop Color="Green" Offset="0.9"/>
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <!-- the "gel" hilight at the top of the button -->
+
+                            <!-- place for the content inside the button to be displayed -->
+                            <ContentPresenter Grid.RowSpan="2"   
+              x:Name="PrimaryContent"
+              HorizontalAlignment="Center" VerticalAlignment="Center"
+              Margin="{TemplateBinding Padding}" 
+              Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" 
+              />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="white" />
+            <Setter Property="FontFamily" Value="Lucida Console" />
+            <Setter Property="FontWeight" Value="Heavy" />
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        <Style TargetType="{x:Type DatePicker}">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Rectangle Margin="5,5,5,5" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown" RadiusX="10" RadiusY="10">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="3" />
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF155C15" Offset="0" />
+                    <GradientStop Color="#B7FFFFFF" Offset="1" />
+                    <GradientStop Color="#FF305530" Offset="0.047" />
+                    <GradientStop Color="#FFC2CCC2" Offset="0.076" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Height="30" HorizontalAlignment="Right"  Margin="0,3,4,0" Name="btnCerrar" MouseLeftButtonDown="btnCerrar_MouseLeftButtonDown" Source="/project.recso.bascula.frontend.wpf;component/media/redbutton.png" Stretch="Fill" VerticalAlignment="Top" Width="30" />
+        <ListBox Margin="20,58,0,24" FontFamily="Courier New" FontWeight="Heavy" FontSize="18" HorizontalContentAlignment="Center" BorderThickness="2" BorderBrush="Black" Name="listaMatriculas"  HorizontalAlignment="Left" Width="268" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,89,66,0" Visibility="Hidden" Name="txtRecnum" VerticalAlignment="Top" Width="310" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,89,66,0" Name="txtMatricula" VerticalAlignment="Top" Width="310" />
+        <Label Content="Matricula" Height="28" HorizontalAlignment="Left" Margin="301,60,0,0" Name="label1" VerticalAlignment="Top" />
+        <Button Content="Eliminar" Height="23" HorizontalAlignment="Left" Margin="320,320,0,0" Name="btnEliminar" VerticalAlignment="Top" Width="75" Click="eliminar" />
+        <Button Content="Guardar" Height="35" HorizontalAlignment="Right" Margin="0,273,66,0" Name="btnGuardar" VerticalAlignment="Top" Width="87" Click="guardar" />
+        <Label Content="Fecha de alta:" Height="28" HorizontalAlignment="Left" Margin="303,120,0,0" Name="label2" VerticalAlignment="Top" />
+        <DatePicker Height="25" HorizontalAlignment="Right" Margin="0,160,66,0" Name="dpAlta" VerticalAlignment="Top" Width="310" />
+        <Label Content="Fecha de baja:" Height="28" HorizontalAlignment="Left" Margin="303,196,0,0" Name="label3" VerticalAlignment="Top" />
+        <DatePicker Height="25" HorizontalAlignment="Right" Margin="0,234,66,0" Name="dpBaja" VerticalAlignment="Top" Width="309" />
+        <Label Content="Vehiculos de la empresa" Height="28" HorizontalAlignment="Left" Margin="11,8,0,0" Name="label4" VerticalAlignment="Top" Width="329" Foreground="#FFE8DFDF" FontWeight="Black" PreviewMouseLeftButtonDown="Rectangle_MouseLeftButtonDown" />
+        <Button Content="Nuevo" Height="35" HorizontalAlignment="Right" Margin="0,320,66,0" Name="btnNuevo" VerticalAlignment="Top" Width="87" Click="nuevo" />
+    </Grid>
+</Window>

@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="project.recso.bascula.frontend.wpf.web.Clientes.editCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="500" Width="1000" Loaded="Window_Loaded" Unloaded="UserControl_Unloaded" Background="{x:Null}"  BorderBrush="{x:Null}">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="PasswordChar" Value="*" />
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ClipToBounds="False">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <!-- the background for the button -->
+                            <Rectangle RadiusX="15" RadiusY="10" Grid.RowSpan="2">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStop Color="#00ca00" Offset="0"/>
+                                            <GradientStop Color="Green" Offset="0.9"/>
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <!-- the "gel" hilight at the top of the button -->
+
+                            <!-- place for the content inside the button to be displayed -->
+                            <ContentPresenter Grid.RowSpan="2"   
+              x:Name="PrimaryContent"
+              HorizontalAlignment="Center" VerticalAlignment="Center"
+              Margin="{TemplateBinding Padding}" 
+              Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" 
+              />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="white" />
+            <Setter Property="FontFamily" Value="Lucida Console" />
+            <Setter Property="FontWeight" Value="Heavy" />
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="10,10,10,10">
+        <Rectangle Margin="0,0,0,0" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown" RadiusX="20" RadiusY="20" Fill="#FFEFEFC4" Stroke="Black" StrokeThickness="3">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="10" Color="Black" ShadowDepth="10" Direction="-50" />
+            </Rectangle.Effect>
+        </Rectangle>
+        <Ellipse MouseLeftButtonDown="ellipse1_MouseLeftButtonDown" Height="18" Margin="0,12,12,0" Name="ellipse1" Stroke="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="19">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="#FFE50C0C" Offset="0" />
+                    <GradientStop Color="#FFCF0A0A" Offset="0.18" />
+                    <GradientStop Color="#F4B90808" Offset="0.471" />
+                    <GradientStop Color="#E3960606" Offset="0.762" />
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Label Content="Empresa" Height="40" HorizontalAlignment="Left" Margin="20,12,0,0"  VerticalAlignment="Top" Width="139" FontSize="24" FontWeight="ExtraBold" Foreground="black" />
+        <Label Content="Empresa" Height="40" HorizontalAlignment="Left" Margin="18,10,0,0" Name="label2" VerticalAlignment="Top" Width="141" FontSize="24" FontWeight="ExtraBold" Foreground="#FF00A400" />
+
+
+        <Label Content="Nombre de la empresa:" Height="28" HorizontalAlignment="Left" Margin="19,60,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="20,84,0,0" Name="txtNombre" VerticalAlignment="Top" Width="404" />
+
+
+        <Button Content="Cerrar" Height="29" HorizontalAlignment="Right" Margin="0,0,12,12"  Name="btnCerrar" VerticalAlignment="Bottom" Width="79" Click="cerrar" />
+        <Button Content="Guardar" Height="29" HorizontalAlignment="Right" Margin="0,0,97,12" Name="btnGuardar" VerticalAlignment="Bottom" Width="123" Click="guardar" />
+        <Button Content="Eliminar" Height="29" HorizontalAlignment="Left" Margin="12,0,0,12" Name="btnEliminar" VerticalAlignment="Bottom" Width="90" Click="eliminar" />
+        <Label Content="Razon social:" HorizontalAlignment="Left" Margin="19,109,0,0" Name="label3" Height="28" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="20,133,0,0" Name="txtRazon" VerticalAlignment="Top" Width="404" />
+        <Label Content="CIF:" Height="28" HorizontalAlignment="Left" Margin="695,60,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="696,84,0,0" Name="txtCif" VerticalAlignment="Top" Width="221" />
+        <Label Content="Direccion:" Height="28" HorizontalAlignment="Left" Margin="19,155,0,0" Name="label5" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="20,179,0,0" Name="txtDireccion" VerticalAlignment="Top" Width="404" />
+        <Label Content="Codigo en Milena:" Height="28" HorizontalAlignment="Left" Margin="456,60,0,0" Name="label6" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="457,84,0,0" Name="txtCodigoMilena" VerticalAlignment="Top" Width="225" />
+        <Label Content="Telefono:" HorizontalAlignment="Left" Margin="19,203,0,0" Name="label8" Height="28" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="20,227,0,0" Name="txtTelefono" VerticalAlignment="Top" Width="404" />
+        <Label Content="Correo electronico:" Height="28" HorizontalAlignment="Left" Margin="19,249,0,0" Name="label9" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="20,273,0,0" Name="txtEmail" VerticalAlignment="Top" Width="404" />
+        <Label Content="Cuenta bancaria:" Height="28" HorizontalAlignment="Left" Margin="456,109,0,0" Name="label10" VerticalAlignment="Top" />
+        <TextBox Height="25" Margin="457,133,0,0" Name="txtCuentaBancaria" VerticalAlignment="Top" HorizontalAlignment="Left" Width="460" />
+        <Label Content="Provincia:" Height="28" HorizontalAlignment="Left" Margin="455,155,0,0" Name="label11" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="456,179,0,0" Name="txtProvincia" VerticalAlignment="Top" Width="226" />
+        <Label Content="Localidad:" Height="28" HorizontalAlignment="Left" Margin="695,155,0,0" Name="label12" VerticalAlignment="Top" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="696,179,0,0" Name="txtLocalidad" VerticalAlignment="Top" Width="221" />
+        <Label Content="Tipo de pago:" Height="28" HorizontalAlignment="Left" Margin="20,306,0,0" Name="label7" VerticalAlignment="Top" />
+        <ComboBox Height="23" Background="White" BorderBrush="Black"  BorderThickness="1" IsTextSearchEnabled="True"  HorizontalAlignment="Left" Margin="158,311,0,0" Name="cmbTipoPago" VerticalAlignment="Top" Width="266" SelectionChanged="cmbTipoPago_SelectionChanged">
+            <ComboBoxItem Content="EFECTIVO" />
+            <ComboBoxItem Content="PREPAGO" />
+            <ComboBoxItem Content="PENDIENTE DE PAGO" />
+        </ComboBox>
+        <Label Content="Tipo de Cliente:" Height="28" HorizontalAlignment="Left" Margin="457,224,0,0" Name="label13" VerticalAlignment="Top" />
+        <ComboBox Background="White" BorderBrush="Black" BorderThickness="1" Height="23" HorizontalAlignment="Left" IsTextSearchEnabled="True" Margin="620,227,0,0" Name="cmbTipoCliente" VerticalAlignment="Top" Width="298">
+            <ComboBoxItem Content="PRODUCTOR" />
+            <ComboBoxItem Content="POSEEDOR" />
+            <ComboBoxItem Content="PLANTA DE TRANSFERENCIA" />
+            <ComboBoxItem Content="TRANSPORTISTA" />
+            <ComboBoxItem Content="PLANTA DE VALORIZACION" />
+        </ComboBox>
+        <GroupBox Header="Forma de pago" Height="141" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="457,256,0,0" Name="zonaPago" VerticalAlignment="Top" Width="460">
+            <Grid>
+                <Label Content="Saldo Actual:" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label14" VerticalAlignment="Top" />
+                <TextBox Height="25" HorizontalAlignment="Left" Margin="11,34,0,0" Name="txtSaldoActual" VerticalAlignment="Top" Width="113" IsReadOnly="True" />
+                <Label Content="Limite de saldo:" Height="28" HorizontalAlignment="Left" Margin="186,10,0,0" Name="lblLimiteSaldo" VerticalAlignment="Top" />
+                <TextBox Height="25" HorizontalAlignment="Left" Margin="187,34,0,0" Name="txtLimiteSaldo" VerticalAlignment="Top" Width="113" />
+                <Label Height="23" HorizontalAlignment="Left" Margin="10,65,0,0" Name="lblUltimaModificacion" VerticalAlignment="Top" Width="428" FontSize="11" />
+                <Button Content="Agregar Saldo" Height="23" HorizontalAlignment="Left" Margin="11,0,0,4" Name="button1" VerticalAlignment="Bottom" Width="160" Click="button1_Click" />
+            </Grid>
+        </GroupBox>
+        <CheckBox Content="Es moroso" Height="22" HorizontalAlignment="Left" Margin="20,358,0,0" Name="chkmoroso" VerticalAlignment="Top" Width="206" FontSize="14" FontWeight="Bold" />
+        <Image Height="41" HorizontalAlignment="Left" Margin="374,350,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="50" Source="/project.recso.bascula.frontend.wpf;component/Images/mailIcon.png" MouseLeftButtonDown="mandarEmailConDatos" />
+    </Grid>
+</UserControl>

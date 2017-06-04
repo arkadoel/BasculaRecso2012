@@ -1,0 +1,123 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "codigoFuente", "codigoFuente", "{BDAF5DF4-AFCB-4662-AAC1-C13D0F3894DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.recso.bascula.data", "project.recso.bascula.data\project.recso.bascula.data.csproj", "{291C5141-429A-450F-80BA-A95988FD4709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.recso.bascula.logic", "project.recso.bascula.logic\project.recso.bascula.logic.csproj", "{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.recso.bascula.frontend.wpf", "project.recso.bascula.frontend.wpf\project.recso.bascula.frontend.wpf.csproj", "{4BD8AD47-786B-449F-8650-628F4B51AC61}"
+	ProjectSection(ProjectDependencies) = postProject
+		{291C5141-429A-450F-80BA-A95988FD4709} = {291C5141-429A-450F-80BA-A95988FD4709}
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28} = {6224F3D3-F2D4-49CD-8BB2-9923A8041E28}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacion", "Documentacion", "{6E71BDCD-CBF2-496E-9F69-AA33D6FE4C06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.recso.bascula.wpf.controls", "project.recso.bascula.wpf.controls\project.recso.bascula.wpf.controls.csproj", "{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bascula", "Bascula\Bascula.csproj", "{C564E150-C693-426D-811B-7F386AA8C1A3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs28
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Bascula\\Bascula.csproj
+		SccProjectTopLevelParentUniqueName1 = 2012_Bascula.sln
+		SccProjectName1 = Bascula
+		SccLocalPath1 = Bascula
+		SccProjectUniqueName2 = project.recso.bascula.data\\project.recso.bascula.data.csproj
+		SccProjectTopLevelParentUniqueName2 = 2012_Bascula.sln
+		SccProjectName2 = project.recso.bascula.data
+		SccLocalPath2 = project.recso.bascula.data
+		SccProjectUniqueName3 = project.recso.bascula.frontend.wpf\\project.recso.bascula.frontend.wpf.csproj
+		SccProjectTopLevelParentUniqueName3 = 2012_Bascula.sln
+		SccProjectName3 = project.recso.bascula.frontend.wpf
+		SccLocalPath3 = project.recso.bascula.frontend.wpf
+		SccProjectUniqueName4 = project.recso.bascula.logic\\project.recso.bascula.logic.csproj
+		SccProjectTopLevelParentUniqueName4 = 2012_Bascula.sln
+		SccProjectName4 = project.recso.bascula.logic
+		SccLocalPath4 = project.recso.bascula.logic
+		SccProjectUniqueName5 = project.recso.bascula.wpf.controls\\project.recso.bascula.wpf.controls.csproj
+		SccProjectTopLevelParentUniqueName5 = 2012_Bascula.sln
+		SccProjectName5 = project.recso.bascula.wpf.controls
+		SccLocalPath5 = project.recso.bascula.wpf.controls
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{291C5141-429A-450F-80BA-A95988FD4709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{291C5141-429A-450F-80BA-A95988FD4709}.Release|x86.ActiveCfg = Release|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28}.Release|x86.ActiveCfg = Release|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4BD8AD47-786B-449F-8650-628F4B51AC61}.Release|x86.ActiveCfg = Release|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45}.Release|x86.ActiveCfg = Release|Any CPU
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Debug|x86.ActiveCfg = Debug|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Debug|x86.Build.0 = Debug|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Release|Any CPU.ActiveCfg = Release|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Release|x86.ActiveCfg = Release|x86
+		{C564E150-C693-426D-811B-7F386AA8C1A3}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{291C5141-429A-450F-80BA-A95988FD4709} = {BDAF5DF4-AFCB-4662-AAC1-C13D0F3894DA}
+		{6224F3D3-F2D4-49CD-8BB2-9923A8041E28} = {BDAF5DF4-AFCB-4662-AAC1-C13D0F3894DA}
+		{4BD8AD47-786B-449F-8650-628F4B51AC61} = {BDAF5DF4-AFCB-4662-AAC1-C13D0F3894DA}
+		{50BC9380-4C65-49CC-B85D-F4D5F03EBF45} = {BDAF5DF4-AFCB-4662-AAC1-C13D0F3894DA}
+		{C564E150-C693-426D-811B-7F386AA8C1A3} = {BDAF5DF4-AFCB-4662-AAC1-C13D0F3894DA}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+﻿<Controls:MetroWindow x:Class="Bascula.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Recso bascula Villanubla 2013" Height="750" Topmost="False" WindowState="Maximized" Width="1150" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Icon="/Bascula;component/Images/lorryMetro.png">
+    <Grid>
+        <Frame Name="navegador"  LoadCompleted="navegador_LoadCompleted" NavigationUIVisibility="Hidden" ></Frame>
+    </Grid>
+</Controls:MetroWindow>

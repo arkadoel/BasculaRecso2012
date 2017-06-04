@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="project.recso.bascula.frontend.wpf.web.Transitos.buscadorObras"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="500"  Width="800"  Background="{x:Null}" >
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="PasswordChar" Value="*" />
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ClipToBounds="False">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <!-- the background for the button -->
+                            <Rectangle RadiusX="15" RadiusY="10" Grid.RowSpan="2">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStop Color="#00ca00" Offset="0"/>
+                                            <GradientStop Color="Green" Offset="0.9"/>
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <!-- the "gel" hilight at the top of the button -->
+
+                            <!-- place for the content inside the button to be displayed -->
+                            <ContentPresenter Grid.RowSpan="2"   
+              x:Name="PrimaryContent"
+              HorizontalAlignment="Center" VerticalAlignment="Center"
+              Margin="{TemplateBinding Padding}" 
+              Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" 
+              />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="white" />
+            <Setter Property="FontFamily" Value="Lucida Console" />
+            <Setter Property="FontWeight" Value="Heavy" />
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="{x:Null}">
+        <Grid Margin="5,5,5,5"  Background="{x:Null}">
+            <Grid.Effect>
+                <DropShadowEffect RenderingBias="Performance" BlurRadius="5" ShadowDepth="5" />
+            </Grid.Effect>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="407*" />
+            </Grid.RowDefinitions>
+            <Rectangle Margin="0,0,0,-10" Name="rectangle1" Stroke="Black" RadiusX="10" RadiusY="10" StrokeThickness="2" MouseLeftButtonDown="rectangle1_MouseLeftButtonDown">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="#FF366936" Offset="1" />
+                        <GradientStop Color="#FF3CAD3C" Offset="0" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Grid.Row="1" Name="rectangle2" Stroke="Black" StrokeThickness="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="Gainsboro" Offset="1" />
+                        <GradientStop Color="#FFDEDEDE" Offset="0.645" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label Content="Buscador de Obras" Height="28" HorizontalAlignment="Left" FontFamily="Lucida Console" FontSize="14" Margin="3,2,0,0" Foreground="White" Name="label1" VerticalAlignment="Top" Grid.RowSpan="2" Width="233" />
+            <Image Height="30" HorizontalAlignment="Right" Margin="0,0,2,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="30" Source="/project.recso.bascula.frontend.wpf;component/media/redbutton.png" MouseLeftButtonDown="image1_MouseLeftButtonDown" />
+            <Button Content="Ver" Grid.Row="1" Height="23" HorizontalAlignment="Right" Margin="0,16,18,0" Name="btnVer" VerticalAlignment="Top" Width="88" Click="realizarBusqueda" FontFamily="Courier New" FontWeight="Bold" FontSize="14" />
+            <TextBox Grid.Row="1" Height="23" Margin="20,16,112,0" Name="txtFiltro" VerticalAlignment="Top" KeyUp="txtFiltro_KeyUp" />
+            <ListBox Grid.Row="1" Margin="20,90,18,37" Name="lstObras" BorderBrush="Black" BorderThickness="2" FontFamily="Verdana" FontSize="16" />
+            <Button Content="Terminar" Grid.Row="1" Height="30" Margin="20,0,18,11" Name="btnTerminar" VerticalAlignment="Bottom" Click="btnTerminar_Click" FontFamily="Courier New" FontSize="16" FontWeight="Normal" />
+            <Button Content="Enlazar obra a empresa" Height="27" HorizontalAlignment="Right" Margin="0,57,18,0" Name="button2" VerticalAlignment="Top" Width="212" Grid.Row="1" Click="button2_Click" FontFamily="Courier New" FontWeight="Bold" FontSize="14" />
+        </Grid>
+    </Grid>
+</UserControl>

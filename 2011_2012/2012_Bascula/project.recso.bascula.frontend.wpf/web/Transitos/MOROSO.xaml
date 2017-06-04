@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="project.recso.bascula.frontend.wpf.web.Transitos.MOROSO"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="198" Width="610" Unloaded="UserControl_Unloaded">
+    <Grid>
+        <Rectangle Fill="DarkRed" RadiusX="20" Margin="10" RadiusY="20" Stroke="White" StrokeThickness="3">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Button Content="Cerrar" Height="23" HorizontalAlignment="Right" Margin="0,20,22,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Label Content="MOROSO" VerticalContentAlignment="Top" FontFamily="Verdana" FontWeight="ExtraBold" Foreground="White" FontSize="92"  Height="112" HorizontalAlignment="Left" Margin="12,0,0,0" Name="label1" VerticalAlignment="Top" Width="497" />
+        <TextBlock TextWrapping="Wrap" FontSize="14" Text="Se ha detectado que la empresa ..... no esta al dia de sus pagos, por favor consulte con contabilidad."  Foreground="White" HorizontalAlignment="Left" Margin="21,115,0,12" Name="texto" Width="567" />
+    </Grid>
+</UserControl>

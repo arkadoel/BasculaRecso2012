@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="project.recso.bascula.wpf.controls.ListaResiduos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="140" Height="140" d:DesignWidth="800" Background="{x:Null}">
+    <Grid Background="{x:Null}" Loaded="Grid_Loaded" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        <Rectangle RadiusX="30" RadiusY="30" Margin="20,20,20,20">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF67A370" Offset="0" />
+                    <GradientStop Color="#FFD8D8B1" Offset="0.484" />
+                    <GradientStop Color="#FF6BA076" Offset="1" />
+                    <GradientStop Color="#FFC0CDA3" Offset="0.213" />
+                    <GradientStop Color="#FFC3CDA5" Offset="0.795" />
+                    <GradientStop Color="#FFB1C69A" Offset="0.139" />
+                    <GradientStop Color="#FFA6BE95" Offset="0.91" />
+                    <GradientStop Color="#FFD1D4AD" Offset="0.32" />
+                    <GradientStop Color="#FFD3D5AE" Offset="0.648" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.Effect>
+                <DropShadowEffect RenderingBias="Performance" BlurRadius="20" Color="Black"  ShadowDepth="0" Direction="0"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Label Name="lblnombre" Content="10 20 50 RCD MEZCLADO MUY SUCIO CON PELIGROSOS" FontSize="14" FontFamily="Verdana" Height="30" HorizontalAlignment="Left" Margin="46,39,0,0" VerticalAlignment="Top" Width="610" />
+        <Label Content="Precio: 8,52€ con IVA al 8%"  FontSize="14" FontFamily="Verdana"  Height="28" HorizontalAlignment="Left" Margin="46,75,0,0" Name="lblTarifas" VerticalAlignment="Top" />
+        <Label Content="Material de: ENTRADA" HorizontalContentAlignment="Right" FontFamily="Verdana" FontSize="14" Height="28" HorizontalAlignment="Right" Margin="0,75,33,0" Name="lblTipoMaterial" VerticalAlignment="Top" Width="304" />
+        
+    </Grid>
+</UserControl>

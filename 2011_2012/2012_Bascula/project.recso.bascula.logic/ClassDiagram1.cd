@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="project.recso.bascula.logic.claseIntercambio">
+    <Position X="8.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQABAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAgAIAAAAAA=</HashCode>
+      <FileName>claseIntercambio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionConfiguracionApp">
+    <Position X="11" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>gestionConfiguracionApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionEmpresas">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAIAAAAAAAAgAAAAAEAQAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>gestionEmpresas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionEstadisticos">
+    <Position X="5" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="project.recso.bascula.logic.gestionEstadisticos.COLUMNAS">
+        <TypeIdentifier>
+          <NewMemberFileName>gestionEstadisticos.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="project.recso.bascula.logic.gestionEstadisticos.COLUMNAS_OTRAS_TABLAS">
+        <TypeIdentifier>
+          <NewMemberFileName>gestionEstadisticos.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAkAAAAAAAAAABAEAAAAAAAAAAAAAABQAAAEAAAAAAA=</HashCode>
+      <FileName>gestionEstadisticos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionFormasPago">
+    <Position X="0.5" Y="2.75" Width="2" />
+    <NestedTypes>
+      <Class Name="project.recso.bascula.logic.gestionFormasPago.Formas" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>gestionFormasPago.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="project.recso.bascula.logic.gestionFormasPago.resultadoCobro" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>gestionFormasPago.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>gestionFormasPago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionHistorialAlbaranes">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAIAAAA=</HashCode>
+      <FileName>gestionHistorialAlbaranes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionObras">
+    <Position X="2.75" Y="2.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="project.recso.bascula.logic.gestionObras.obraReducida">
+        <TypeIdentifier>
+          <NewMemberFileName>gestionObras.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAACAAAAAEAQACAAAAAAgAAAAgAQAA=</HashCode>
+      <FileName>gestionObras.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionResiduos">
+    <Position X="8.25" Y="5" Width="3" />
+    <NestedTypes>
+      <Class Name="project.recso.bascula.logic.gestionResiduos.__TIPO_RESIDUO__" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>gestionResiduos.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>gestionResiduos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionTipoVehiculo">
+    <Position X="11.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAYAgAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gestionTipoVehiculo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionTransitosActuales">
+    <Position X="11" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAQAAAA=</HashCode>
+      <FileName>gestionTransitosActuales.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionUsuarios">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gestionUsuarios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="project.recso.bascula.logic.gestionVehiculos">
+    <Position X="8.25" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>gestionVehiculos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

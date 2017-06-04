@@ -1,0 +1,56 @@
+﻿<Page x:Class="project.recso.bascula.frontend.wpf.Informes.Consultas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+        Title="Generador de Informes" d:DesignHeight="700" d:DesignWidth="900" >
+    <Grid>
+        <Frame Name="navegador" Margin="5,30,5,5" NavigationUIVisibility="Hidden" ></Frame>
+        <Grid Height="198" Background="{x:Null}" Name="grid1" VerticalAlignment="Top">
+            <Button Content="Ver Informes" Height="28" HorizontalAlignment="Left" Name="btnVerMenu" VerticalAlignment="Top" Width="127" Background="{x:Null}" BorderBrush="Black" BorderThickness="2" Click="btnVerMenu_Click" />
+            <Grid Margin="16,26,16,16" Name="menuInformes" >
+                <Rectangle RadiusX="20" RadiusY="20" Stroke="Black" >
+                    <Rectangle.Effect>
+                        <DropShadowEffect />
+                    </Rectangle.Effect>
+                    <Rectangle.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#EB8D8989" Offset="0.557" />
+                            <GradientStop Color="#51FFFFFF" Offset="1" />
+                            <GradientStop Color="#47E6E6E6" Offset="0" />
+                            <GradientStop Color="#CF9E9A9A" Offset="0.229" />
+                            <GradientStop Color="#CDAFADAD" Offset="0.85" />
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <StackPanel Height="156" HorizontalAlignment="Left" Margin="10,0,0,0" Orientation="Horizontal" Name="stackPanel1" VerticalAlignment="Top" Width="1000" >
+                  
+                    <Button Margin="5,5,5,5" Name="btnReport2" Background="{x:Null}" Width="90" Tag="Reimprimir un albaran">
+                        <StackPanel>
+                            <Image  VerticalAlignment="Top" Margin="0,0,0,0" Source="/project.recso.bascula.frontend.wpf;component/media/printer.png" />
+                            <TextBlock Foreground="White" Text="Reimprimir un albaran" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Verdana" FontSize="12" FontWeight="Heavy"  />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="5,5,5,5" Background="{x:Null}" Width="90" Tag="Filtrar albaranes" Click="boton_Click">
+                        <StackPanel>
+                            <Image  VerticalAlignment="Top" Margin="0,0,0,0" Source="/project.recso.bascula.frontend.wpf;component/media/printer.png" />
+                            <TextBlock Foreground="White" Text="Filtrar albaranes" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Verdana" FontSize="12" FontWeight="Heavy"  />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="5,5,5,5" Background="{x:Null}" Width="90" Tag="Estadisticos" Click="boton_Click">
+                        <StackPanel>
+                            <Image  VerticalAlignment="Top" Margin="0,0,0,0" Source="/project.recso.bascula.frontend.wpf;component/media/document-excel-icon.png" />
+                            <TextBlock Foreground="White" Text="Estadisticos" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Verdana" FontSize="12" FontWeight="Heavy"  />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                    
+            </Grid>
+            
+        </Grid>
+
+        
+
+    </Grid>
+</Page>

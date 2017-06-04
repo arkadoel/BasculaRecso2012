@@ -1,0 +1,95 @@
+﻿<Controls:MetroWindow x:Class="project.recso.bascula.frontend.wpf.Licencias.MsPL"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Licencia de la aplicacion" Height="600" ResizeMode="CanMinimize" Width="700" Background="Gray" Loaded="Window_Loaded" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Grid Background="Gainsboro" Margin="5,0,5,5">
+        <TextBlock TextWrapping="Wrap" FontWeight="Heavy" Height="29" HorizontalAlignment="Left" VerticalAlignment="Top" Width="654" Margin="12,12,0,0">Todo proyecto, codigo fuente o archivo vinculado, en la solucion de Visual Studio, esta gobernado 
+        por la siguiente licencia mixta (a excepcion del texto de la licencia el cual no puede ser modificado):</TextBlock>
+        <RichTextBox Margin="10,51,12,12" Name="RichTextBox1" BorderBrush="Black" VerticalScrollBarVisibility="Visible">
+
+            <FlowDocument>
+
+                <Paragraph>
+
+                    <Bold FontSize="18">Licencia Pública de Microsoft (Ms-PL)</Bold>
+
+                </Paragraph>
+                <Paragraph Foreground="Blue" FontWeight="Heavy">
+                    Esta licencia gobierna el uso del software adjunto. Si usted utiliza el software, ello supone que acepta esta licencia. Si no acepta la licencia, no utilice el software.
+                </Paragraph>
+                <Paragraph FontWeight="Heavy">
+                    1. Definiciones
+                </Paragraph>
+                <Paragraph>                    
+                    Los términos "reproducir", "reproducción" y "distribución" tienen aquí (en el Reino de España) el mismo significado que en las leyes de Copyright de EE.UU.
+
+                    Una “contribución” es el software original o cualquier añadido o cambio realizado sobre el software.
+
+                    Un “colaborador” es cualquier persona que distribuye su contribución en el marco de esta licencia.
+
+                    “Patentes licenciadas” son los derechos de patente del colaborador que se refieren directamente a su contribución.
+                </Paragraph>
+                <Paragraph></Paragraph>
+                <Paragraph FontWeight="Heavy">
+                    2. Asignación de derechos
+                </Paragraph>
+                <Paragraph>
+                    (A) Derechos de Copyright- Dentro de los términos de esta licencia, incluyendo las condiciones y limitaciones de la licencia descritas en la sección 3, cada colaborador le otorga una licencia de copyright no exclusiva, mundial y exenta de royalties para reproducir su contribución, preparar trabajos derivados de su contribución y distribuir su contribución en cualquier producto derivado creado por usted.
+                </Paragraph>
+                <Paragraph>
+                    (B) Derechos de patente- Dentro de los términos de esta licencia, incluyendo las condiciones y limitaciones descritas en la sección 3, cada colaborador le otorga una licencia no exclusiva, mundial y exenta de royalties sobre las patentes licenciadas para realizar, utilizar, vender, ofrecer a la venta, importar y/o distribuir sus contribuciones en el software o productos derivados de la contribución en el software.
+                </Paragraph>
+                <Paragraph></Paragraph>
+                <Paragraph FontWeight="Heavy">
+                    3. Condiciones y Limitaciones
+                </Paragraph>
+                <Paragraph>
+                    (A) No se otorgan licencia de Marcas- Esta licencia no otorga derechos para utilizar ningún nombre, logo o marca de los colaboradores.
+                </Paragraph>
+                <Paragraph>
+                    (B) Si inicia alguna reclamación de patente contra cualquier colaborador sobre patentes que usted considera que han sido infringidas por el software, su licencia de patente del citado colaborador para el software cesa automáticamente.
+                </Paragraph>
+                <Paragraph>
+                    (C) Si distribuye cualquier parte del software, debe conservar todos los documentos de copyright, patentes, marcas y atribución presentes en el software.
+                </Paragraph>
+                <Paragraph>
+                    (D) Si distribuye cualquier parte del software en forma de código fuente, puede hacerlo únicamente bajo el marco de esta licencia incluyendo una copia completa de esta licencia junto con su distribución. Si distribuye cualquier parte del software en forma de código objeto o compilado, puede hacerlo únicamente bajo una licencia que cumpla con los términos de la presente licencia.</Paragraph>
+                <Paragraph>
+                    (E) El software se licencia "tal cual". Usted asume todo el riesgo al utilizarlo. El Propietario no ofrece garantías expresas ni implícitas, ni condiciones ni asume responsabilidad alguna. Las leyes locales de su país o región pueden otorgarle derechos adicionales como consumidor, los cuales no se ven alterados por esta licencia. Hasta donde lo permiten las leyes locales, el Propietario rechaza asumir ninguna garantía de comercialización, adaptación para un fin concreto o incumplimiento de la ley.
+                </Paragraph>
+                <Paragraph></Paragraph>
+                
+                <Paragraph></Paragraph>
+                <Paragraph>
+                    <Bold FontSize="18">Licencia de desarrollo:</Bold>
+                </Paragraph>
+                <Paragraph Foreground="Blue" FontWeight="Heavy">
+                    Esta licencia es de aplicacion tanto para el tiempo de desarrollo, como para los desarrolladores que contribuyen a dicho desarrollo.
+                    La contribucion de codigo a la aplicacion implica la aceptacion de la "licencia de desarrollo".
+                </Paragraph>
+                <Paragraph></Paragraph>
+                <Paragraph>El desarrollador cede todos los derechos que pueda tener sobre la aplicacion a excepcion de los siguientes:</Paragraph>
+                <Paragraph>(A) Derecho a reconocimiento de colaboracion, quedando registrado al menos un nombre y correo electronico de contacto.</Paragraph>
+                
+                <Paragraph>
+                    <Rectangle Height="0.1cm" Width="15cm" HorizontalAlignment="Left" Fill="Black"/>
+                </Paragraph>
+                <Paragraph>Zona de reconocimiento de contribucion a la solucion:</Paragraph>
+                <Paragraph></Paragraph>
+                    <List>
+                        <ListItem>
+                            <Paragraph FontWeight="Heavy">Programador inicial version 1 de 2011</Paragraph>
+                            <Paragraph>                                
+                                Fernando D. Minguela (fer.d.minguela@gmail.com)
+                            </Paragraph>                            
+                        </ListItem>
+                    </List>
+                <Paragraph></Paragraph>
+                <Paragraph></Paragraph>
+                <Paragraph></Paragraph>
+            </FlowDocument>
+
+        </RichTextBox>
+    </Grid>
+</Controls:MetroWindow>
